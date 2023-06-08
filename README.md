@@ -79,6 +79,14 @@ kaggle datasets download -d evgeniimaslov2/birdclef-2023-xc-africa-5
 
 unzip birdclef-2023-xc-africa-5.zip -d data/external/birdclef-2023-xc
 
+kaggle datasets download -d mmoreaux/environmental-sound-classification-50
+
+unzip environmental-sound-classification-50.zip -d data/external/background_noise
+
+kaggle datasets download -d evgeniimaslov2/nocall-soundscapes
+
+unzip nocall-soundscapes.zip -d data/external/nocall_soundscapes
+
 
 # DATA PROCESSING
 
