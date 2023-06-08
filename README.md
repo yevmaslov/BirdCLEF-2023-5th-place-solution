@@ -5,26 +5,21 @@ If you run into any trouble with the setup/code or have any questions please con
 
 
 
-# ARCHIVE CONTENTS
-
-models.zip - contains trained models, converted to ONNX runtime
-src - contains source code
-data/processed - contains metadata used in generating solution
-notebooks - contains scripts to train model, make pseudolabels, and generate solution from scratch
-configs - config files used to train models
-
-
 # HARDWARE: (The following specs were used to create the original solution)
 
 Ubuntu 20.04 LTS
+
 1xNVIDIA A6000 or 1xNVIDIA A100 (depending on availability)
+
 12vCPU, 45 or 90 GB memory
 
 
 # SOFTWARE (python packages are detailed separately in `requirements.txt`):
 
 Python 3.5.1
+
 CUDA 11.6
+
 nvidia drivers v.510.73.05
 
 
