@@ -28,40 +28,55 @@ nvidia drivers v.510.73.05
 
 
 mkdir data
+
 mkdir data/raw
+
 mkdir data/external
+
 mkdir data/external/birdclef-2023-xc
+
 mkdir data/processed
+
 mkdir models
 
 kaggle competitions download -c birdclef-2023
+
 unzip birdclef-2023.zip -d data/raw
 
 kaggle competitions download -c birdclef-2022
+
 unzip birdclef-2022.zip -d data/external/birdclef-2022
 
 kaggle competitions download -c birdclef-2021
+
 unzip birdclef-2021.zip -d data/external/birdclef-2021
 
 kaggle datasets download -d evgeniimaslov2/birdclef-2023-xc-primary
+
 unzip birdclef-2023-xc-primary.zip -d data/external/birdclef-2023-xc
 
 kaggle datasets download -d evgeniimaslov2/birclef-2023-xc-secondary
+
 unzip birclef-2023-xc-secondary.zip -d data/external/birdclef-2023-xc
 
 kaggle datasets download -d evgeniimaslov2/birdclef-2023-xc-africa-1
+
 unzip birdclef-2023-xc-africa-1.zip -d data/external/birdclef-2023-xc
 
 kaggle datasets download -d evgeniimaslov2/birdclef-2023-xc-africa-2
+
 unzip birdclef-2023-xc-africa-2.zip -d data/external/birdclef-2023-xc
 
 kaggle datasets download -d evgeniimaslov2/birdclef-2023-xc-africa-3
+
 unzip birdclef-2023-xc-africa-3.zip -d data/external/birdclef-2023-xc
 
 kaggle datasets download -d evgeniimaslov2/birdclef-2023-xc-africa-4
+
 unzip birdclef-2023-xc-africa-4.zip -d data/external/birdclef-2023-xc
 
 kaggle datasets download -d evgeniimaslov2/birdclef-2023-xc-africa-5
+
 unzip birdclef-2023-xc-africa-5.zip -d data/external/birdclef-2023-xc
 
 
