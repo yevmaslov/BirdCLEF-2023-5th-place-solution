@@ -23,6 +23,8 @@
 ./data/external/birdclef-2021/train_short_audio
 ./data/external/birdclef-2023-xc
 ./data/external/birdclef-2023-xc/wav
+./data/external/background_noise
+./data/external/nocall_soundscapes
 ./data/raw
 ./data/raw/train_audio
 ./models
