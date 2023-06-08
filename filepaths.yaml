@@ -1,0 +1,17 @@
+
+raw_dir: 'data/raw'
+processed_dir: 'data/processed'
+interim_dir: 'data/interim'
+external_dir: 'data/external'
+
+birdclef_2023_audio_dir: 'data/processed/birdclef-2023/wav'
+birdclef_2022_audio_dir: 'data/external/birdclef-2022/train_audio'
+birdclef_2021_audio_dir: 'data/external/birdclef-2021/train_short_audio'
+
+xeno_canto_2023_audio_dir: 'data/external/birclef-2023-xc/'
+xeno_canto_2022_audio_dir: ''
+
+esc50_noise_dir: 'data/external/background_noise/audio/audio'
+no_call_noise_audio_dir: 'data/external/nocall_noise/nocall_soundscape'
+
+models_dir: 'models'

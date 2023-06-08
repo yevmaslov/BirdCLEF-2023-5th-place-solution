@@ -1,0 +1,134 @@
+criterion:
+  type: BCEWithLogitsLoss
+dataframe:
+  mixup_thr: 250
+  pseudo_2021_config:
+    use: false
+  pseudo_2021_xc_config:
+    use: false
+  pseudo_2022_config:
+    use: false
+  pseudo_2022_xc_config:
+    use: false
+  pseudo_2023_config:
+    inference_type: window
+    use: true
+    path: 'exp169_exp172_exp176_exp177_exp182_exp187_exp188_exp192_exp205_exp222_exp223_exp226/pseudolabels_full2'
+  pseudo_2023_xc_config:
+    inference_type: window
+    use: true
+    path: 'exp169_exp172_exp176_exp177_exp182_exp187_exp188_exp192/pseudolabels_xc_full'
+  train_2021_config:
+    drop: false
+    filter_threshold: 0
+    max_duration: 60
+    upsample_threshold: 20
+    use: false
+  train_2022_config:
+    drop: false
+    filter_threshold: 0
+    max_duration: 360
+    upsample_threshold: 20
+    use: false
+  train_2023_config:
+    drop: false
+    filter_threshold: 10
+    max_duration: 360
+    upsample_threshold: 10
+    use: true
+  use_africa: true
+  africa_pseudo_path: 'exp169_exp172_exp176_exp177_exp182_exp187_exp188_exp192/pseudolabels_xc_africa'
+  weight_from_rating: true
+  xc_2021_data_config:
+    downsample_threshold: 1000
+    max_duration: 45
+    use: false
+  xc_2022_data_config:
+    downsample_threshold: 1000
+    max_duration: 45
+    use: false
+  xc_2023_data_config:
+    downsample_threshold: 1000
+    max_duration: 999
+    upsample_smallest_n: 5
+    upsample_threshold: 10
+    use: true
+    full: true
+  zendodo_config:
+    max_duration: 5
+    use: false
+dataset:
+  audio_mix_up_prob: 1
+  external_noise_aug_prob: 0.3
+  fmax: 16000
+  fmin: 20
+  freq_mask_prob: 0.5
+  hop_length: 512
+  mel_norm: false
+  mixup_alpha: 1.6
+  n_mels: 128
+  nfft: 2028
+  noise_aug_prob: 0.5
+  normalize: true
+  sample_rate: 32000
+  second_time_mask_prob: 0.5
+  time_mask_prob: 0.5
+  top_db: 80
+  train_audio_len: 160000
+  train_batch_size: 36
+  train_duration: 5
+  use_brown_noise: true
+  use_esc50_noise: true
+  use_gaussian_noise: true
+  use_no_call_noise: true
+  use_noise_injection: true
+  use_pink_noise: true
+  valid_audio_len: 160000
+  valid_batch_size: 36
+  valid_duration: 5
+  window: 2048
+environment:
+  n_workers: 4
+  seed: 42
+experiment_name: exp285
+fold: -1
+logger:
+  job_type: training
+  project: birdclef-2023
+  train_print_frequency: 100
+  use_wandb: true
+  valid_print_frequency: 100
+model:
+  architecture: tattaka_sed
+  backbone_type: tf_efficientnet_b2_ns
+  dropout: 0.5
+  encoder_state: ''
+  finetune_head: false
+  finetune_top_layers: false
+  freeze_n_layers: 0
+  hidden_dropout: 0.1
+  model_state: exp246
+  reinitialize_n_layers: 1
+optimizer:
+  betas:
+  - 0.9
+  - 0.999
+  decoder_lr: 0.0005
+  embeddings_lr: 0.0005
+  encoder_lr: 0.0005
+  eps: 1.0e-06
+  group_lr_multiplier: 1
+  n_groups: 1
+  weight_decay: 0.001
+run_id: exp285_fold-1_1_-99
+run_name: exp285_fold-1
+scheduler:
+  cosine_schedule_with_warmup:
+    n_cycles: 0.5
+    n_warmup_steps: 0
+  type: cosine_schedule_with_warmup
+training:
+  apex: false
+  epochs: 40
+  evaluate_n_times_per_epoch: 1
+  max_grad_norm: 1
